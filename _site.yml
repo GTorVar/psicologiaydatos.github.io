@@ -1,0 +1,13 @@
+name: "psicologiaygatos"
+output_dir: "."
+navbar:
+  title: "Psicología y Datos"
+  left:
+    - text: "General"
+      href: index.html
+    - text: "Análisis especiales"
+      href: about.html
+output:
+  html_document:
+    theme: flatly
+    highlight: textmate

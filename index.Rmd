@@ -1,0 +1,23 @@
+---
+title: "General"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+---
+
+A continuación se presentan los temas breves para entender el análisis de datos en ciencias de la salud.
+
+# El primer análisis
+
+## Los descriptivos
+
+# Comprobación de supuestos habituales
+
+## Normalidad
+
+
+## Homocedasticidad
+
+
+## 
