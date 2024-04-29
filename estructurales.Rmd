@@ -1,0 +1,9 @@
+---
+title: "Análisis básicos"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+---
+
+Aquí analizaremos los modelos estructurales.

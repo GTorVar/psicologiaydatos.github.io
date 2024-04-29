@@ -3,10 +3,12 @@ output_dir: "."
 navbar:
   title: "Psicología y Datos"
   left:
-    - text: "General"
-      href: index.html
-    - text: "Análisis especiales"
-      href: about.html
+    - text: "Análisis básicos"
+      href: basicos.html
+    - text: "Análisis avanzados"
+      href: avanzados.html
+    - text: "Modelos estructurales"
+      href: estructurales.html
 output:
   html_document:
     theme: flatly

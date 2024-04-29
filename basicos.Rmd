@@ -1,5 +1,5 @@
 ---
-title: "General"
+title: "Análisis básicos"
 output:
   html_document:
     toc: true
@@ -20,4 +20,4 @@ A continuación se presentan los temas breves para entender el análisis de dato
 ## Homocedasticidad
 
 
-## 
+## Esfericidad
