@@ -1,8 +1,10 @@
-name: "psicologiaygatos"
+name: "psicologiaydatos"
 output_dir: "."
 navbar:
   title: "Psicología y Datos"
   left:
+    - text: "Índice"
+      href: index.html
     - text: "Análisis básicos"
       href: basicos.html
     - text: "Análisis avanzados"
