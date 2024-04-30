@@ -6,4 +6,4 @@ output:
     toc_depth: 2
 ---
 
-Esta página intenta explicar de manera simple los conceptos del análisis de datos, la metodología y el diseño experimental en Psicología y Ciencias de la Salud en general.
+Esta página intenta explicar de manera simple los conceptos del análisis de datos, la metodología y el diseño experimental en Psicología y Ciencias de la Salud en general. Página en construcción.

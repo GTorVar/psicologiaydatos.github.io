@@ -4,6 +4,7 @@ output:
   html_document:
     toc: true
     toc_depth: 2
+    toc_float: true
 ---
 
 En esta página nos centraremos en modelos concretos, especialmente diseñados para situaciones de investigación concretas.

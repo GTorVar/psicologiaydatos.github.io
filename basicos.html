@@ -29,6 +29,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -219,6 +222,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -226,6 +292,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -270,36 +346,67 @@ $(document).ready(function () {
 
 </div>
 
-<div id="TOC">
-<ul>
-<li><a href="#el-primer-análisis" id="toc-el-primer-análisis">El primer
-análisis</a>
-<ul>
-<li><a href="#los-descriptivos" id="toc-los-descriptivos">Los
-descriptivos</a></li>
-</ul></li>
-<li><a href="#comprobación-de-supuestos-habituales"
-id="toc-comprobación-de-supuestos-habituales">Comprobación de supuestos
-habituales</a>
-<ul>
-<li><a href="#normalidad" id="toc-normalidad">Normalidad</a></li>
-<li><a href="#homocedasticidad"
-id="toc-homocedasticidad">Homocedasticidad</a></li>
-<li><a href="#esfericidad" id="toc-esfericidad">Esfericidad</a></li>
-</ul></li>
-</ul>
-</div>
 
 <p>A continuación se presentan los temas breves para entender el
-análisis de datos en ciencias de la salud.</p>
+análisis de datos en ciencias de la salud. La primera aproximación a los
+datos tiene que hacerse siempre teniendo en cuenta la metodología
+aplicada a la recogida de datos, tanto si es un experimento, un
+cuasi-experimento o una observación. A este respecto, siempre es
+recomendable tener a mano al “metodólogo de cabecera”, sea un buen libro
+o un compañero.</p>
 <div id="el-primer-análisis" class="section level1">
 <h1>El primer análisis</h1>
+<p>Casi siempre, lo primero que hace cualquier persona que quiere
+entender los datos, es mirar los descriptivos. A este respecto, todos
+los programas, desde Excel a SAS (sí, en medio se incluye al famoso
+SPSS), tienen buenas funciones para hallarlos, con pequeñas
+discrepancias quizás en el cálculo de la moda, pero poco más. Sin
+embargo, en esta página usaremos R por su potencia y sencillez; tampoco
+es tanto la prioridad entender el código como entender el significado de
+los elementos que nos devuelve una tabla de descriptivos… aunque todos
+sabemos lo que es una media, ¿o no?</p>
 <div id="los-descriptivos" class="section level2">
 <h2>Los descriptivos</h2>
+<p>Los descriptivos son los estadísticos que antes se ven en cualquier
+carrera de CC de la Salud (bueno, en cualquier carrera en general),
+debido a que son el principio de todo. La media, la desviación típica,
+la mediana, la moda… La lista puede extenderse según el autor y según lo
+que queramos entender por “describir” unos datos. Lo importante es saber
+que se pueden considerar dos grandes grupos: las medidas de tendencia
+central y las de variabilidad. Empezaremos por los conocidos, para
+partir de algo sencillo.</p>
+<div id="tendencia-central" class="section level3">
+<h3>Tendencia central</h3>
+<p>El estadístico más conocido del mundo, el que aparece en las
+noticias, la <strong>media.</strong> El promedio aritmético de unos
+datos, el considerado mejor representante de un conjunto de valores:</p>
+<p><span class="math display">\[\frac{1}{n}\sum_{i=1}^n x_i\]</span></p>
+<p>Esta es la expresión más general, pero no la única. Tampoco nos vamos
+a enredar con el artificio matemático. Pero es importante entender que
+hay más tipos de medias: geométricas, armónicas, ponderadas… Cada una
+óptima para un caso. La media presentada en la fórmula anterior es la
+aritmética. Al dividir la suma de los valores entre la cantidad de
+valores, se obtiene un valor “resumen” del conjunto de valores, pero
+aquí vienen las observaciones, especialmente en campos en donde se toman
+medidas categóricas (el típico test psicológico con una escala tipo
+Likert). Si tenemos valores discretos (como números enteros), ¿cómo de
+fiable es? Veamos ejemplos.</p>
+<ul>
+<li><p>Si unos datos tienen valores muy bajos y muy altos, pero ninguno
+en el medio, la media estará en la mitad y podrá confundir: <span
+class="math inline">\(\frac{1+1+1+1+1+10+10+10+10+10}{10}=4.5\)</span></p></li>
+<li><p>Si hay más valores muy bajos o muy altos, distorsionarán la
+media: <span
+class="math inline">\(\frac{1+2+3+4+5+6+7+8+9+50}{10}=9.5\)</span></p></li>
+</ul>
 </div>
 </div>
-<div id="comprobación-de-supuestos-habituales" class="section level1">
-<h1>Comprobación de supuestos habituales</h1>
+<div id="los-gráficos" class="section level2">
+<h2>Los gráficos</h2>
+</div>
+</div>
+<div id="comprobación-de-supuestos" class="section level1">
+<h1>Comprobación de supuestos</h1>
 <div id="normalidad" class="section level2">
 <h2>Normalidad</h2>
 </div>
@@ -313,6 +420,8 @@ análisis de datos en ciencias de la salud.</p>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -345,6 +454,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
