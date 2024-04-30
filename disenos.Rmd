@@ -1,0 +1,40 @@
+---
+title: "Metodología y diseños"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+   # toc_float: true
+   # number_sections: true
+---
+
+En esta sección, hablaremos de los distintos diseños de investigación.
+
+# Diseños experimentales
+
+
+# Diseños cuasi-experimentales
+
+
+# Diseños observacionales
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

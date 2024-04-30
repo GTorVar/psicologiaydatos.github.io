@@ -319,16 +319,37 @@ div.tocify {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">Índice</a>
+  <a href="index.html">Principal</a>
 </li>
-<li>
-  <a href="basicos.html">Análisis básicos</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Análisis de datos
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="basicos.html">Análisis básicos</a>
+    </li>
+    <li>
+      <a href="avanzados.html">Análisis avanzados</a>
+    </li>
+    <li>
+      <a href="estructurales.html">Modelos estructurales</a>
+    </li>
+  </ul>
 </li>
-<li>
-  <a href="avanzados.html">Análisis avanzados</a>
-</li>
-<li>
-  <a href="estructurales.html">Modelos estructurales</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Metodología y diseños
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="disenos.html">Diseños experimentales</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -354,8 +375,8 @@ aplicada a la recogida de datos, tanto si es un experimento, un
 cuasi-experimento o una observación. A este respecto, siempre es
 recomendable tener a mano al “metodólogo de cabecera”, sea un buen libro
 o un compañero.</p>
-<div id="el-primer-análisis" class="section level1">
-<h1>El primer análisis</h1>
+<div id="el-primer-análisis" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> El primer análisis</h1>
 <p>Casi siempre, lo primero que hace cualquier persona que quiere
 entender los datos, es mirar los descriptivos. A este respecto, todos
 los programas, desde Excel a SAS (sí, en medio se incluye al famoso
@@ -365,8 +386,8 @@ embargo, en esta página usaremos R por su potencia y sencillez; tampoco
 es tanto la prioridad entender el código como entender el significado de
 los elementos que nos devuelve una tabla de descriptivos… aunque todos
 sabemos lo que es una media, ¿o no?</p>
-<div id="los-descriptivos" class="section level2">
-<h2>Los descriptivos</h2>
+<div id="los-descriptivos" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Los descriptivos</h2>
 <p>Los descriptivos son los estadísticos que antes se ven en cualquier
 carrera de CC de la Salud (bueno, en cualquier carrera en general),
 debido a que son el principio de todo. La media, la desviación típica,
@@ -375,8 +396,9 @@ que queramos entender por “describir” unos datos. Lo importante es saber
 que se pueden considerar dos grandes grupos: las medidas de tendencia
 central y las de variabilidad. Empezaremos por los conocidos, para
 partir de algo sencillo.</p>
-<div id="tendencia-central" class="section level3">
-<h3>Tendencia central</h3>
+<div id="tendencia-central" class="section level3" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> Tendencia
+central</h3>
 <p>El estadístico más conocido del mundo, el que aparece en las
 noticias, la <strong>media.</strong> El promedio aritmético de unos
 datos, el considerado mejor representante de un conjunto de valores:</p>
@@ -401,23 +423,30 @@ class="math inline">\(\frac{1+2+3+4+5+6+7+8+9+50}{10}=9.5\)</span></p></li>
 </ul>
 </div>
 </div>
-<div id="los-gráficos" class="section level2">
-<h2>Los gráficos</h2>
+<div id="los-gráficos" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Los gráficos</h2>
 </div>
 </div>
-<div id="comprobación-de-supuestos" class="section level1">
-<h1>Comprobación de supuestos</h1>
-<div id="normalidad" class="section level2">
-<h2>Normalidad</h2>
+<div id="comprobación-de-supuestos" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Comprobación de
+supuestos</h1>
+<div id="normalidad" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Normalidad</h2>
 </div>
-<div id="homocedasticidad" class="section level2">
-<h2>Homocedasticidad</h2>
+<div id="homocedasticidad" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Homocedasticidad</h2>
 </div>
-<div id="esfericidad" class="section level2">
-<h2>Esfericidad</h2>
+<div id="esfericidad" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Esfericidad</h2>
 </div>
 </div>
 
+<div>
+  <footer style="position:absolute; bottom:10px; text-align:center; font-size:8pt; padding: 10px 200px 10px 200px; background-color: DarkSalmon">
+    <p>Página en construcción.</p>
+    <p><a href="mailto:torresgvaras@gmail.com">Contacto</p>
+  </footer>
+</div>
 
 
 </div>

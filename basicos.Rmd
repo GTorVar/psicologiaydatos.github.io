@@ -5,6 +5,7 @@ output:
     toc: true
     toc_depth: 2
     toc_float: true
+    number_sections: true
 ---
 
 A continuación se presentan los temas breves para entender el análisis de datos en ciencias de la salud. La primera aproximación a los datos tiene que hacerse siempre teniendo en cuenta la metodología aplicada a la recogida de datos, tanto si es un experimento, un cuasi-experimento o una observación. A este respecto, siempre es recomendable tener a mano al "metodólogo de cabecera", sea un buen libro o un compañero.
@@ -42,3 +43,4 @@ Esta es la expresión más general, pero no la única. Tampoco nos vamos a enred
 
 
 ## Esfericidad
+
