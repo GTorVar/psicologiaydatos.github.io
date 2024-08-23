@@ -3,7 +3,7 @@ output_dir: "."
 navbar:
   title: "Psicología y Datos"
   left:
-    - text: "Principal"
+    - text: "Inicio"
       href: index.html
     - text: "Análisis de datos"
       menu:
@@ -11,8 +11,6 @@ navbar:
           href: basicos.html
         - text: "Análisis avanzados"
           href: avanzados.html
-        - text: "Modelos estructurales"
-          href: estructurales.html
     - text: "Metodología y diseños"
       menu:
         - text: "Diseños experimentales"
@@ -21,5 +19,3 @@ output:
   html_document:
     theme: flatly
     highlight: textmate
-    include:
-      after_body: footer.html

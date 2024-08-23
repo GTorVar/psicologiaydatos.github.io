@@ -1,9 +1,20 @@
 ---
-title: "Índice"
-output:
-  html_document:
-    toc: true
-    toc_depth: 2
+title: "Inicio"
+output: html_document
+#    toc: true
+#    toc_depth: 2
 ---
 
-Esta página intenta explicar de manera simple los conceptos del análisis de datos, la metodología y el diseño experimental en Psicología y Ciencias de la Salud en general. Página en construcción.
+En este viaje trataremos de poner en práctica diferentes conceptos esenciales de la estadística y la metodología aplicada a la psicología, porque no siempre que se descubre una relación se le da importancia y porque a veces cuando se descubre una relación no tiene impacto. De todas las diversas definiciones que existen de metodología nos interesa simplemente quedarnos con la noción de que es lo que separa el conocimiento sistemático de otros tipos de saber y de la superstición. 
+
+Intentado ser rigurosos en nuestro trabajo usamos instrumentos y herramientas para evaluar a las personas o simplemente conocerlas un poco mejor. Sin embargo, el diablo está en los detalles: ¿qué narices es ese coeficiente $\alpha$? ¿Por qué tengo que normalizar una puntuación? ¿Qué tipo de validez tiene ese test? En otras ocasiones, hemos llevado a cabo nuestra intervención como tantas veces y esa persona parece que nos hace dudar de nosotros: ¿por qué no mejora? ¿Es normal que después de estas sesiones haya cambiado tanto o tan poco? Si bien es cierto que en no muchas ocasiones nos damos a realizar estudios con cada persona, desde luego es conveniente apuntar ciertos datos para saber cómo de eficaces, efectivos y eficientes somos en nuestra profesión y poder responder esas preguntas. Ante las innovaciones terapéuticas no es raro que no sepamos qué enfoque elegir, la literatura es inmensa para todo tipo de terapias y resulta que lo que un estudio afirma, otro lo desdice: ¿cuál elegimos? ¿Tan caótica es esta profesión para no tener nada en claro? 
+
+Pretendiendo arrojar luz sobre estas cuestiones, nace esta página con el firme propósito de explicar estas cuestiones sin liarnos en las madejas de fórmulas y algoritmos que se usan en investigación cuantitativa ni en palabras que requieren acudir a *Wikipedia* cada tres segundo. Aunque es cierto que daremos por conocido los temas más básicos, cualquier asunto por el que tengáis curiosidad u os gustase poder hacer por vosotros mismos en R o Jamovi (todo de código abierto, nos ahorraremos unos eurillos), podéis escribir al [correo de la página](mailto:torresgvaras+pagina@gmail.com). ¡En cada sección iremos subiendo los artículos!
+
+\
+
+\
+
+### Sobre el autor
+
+Soy Germán Torres, psicólogo y "metodólogo" (ya sé que esa palabra no existe, pero suena importante). Tras mucho tiempo pensando si hacer esta página, creo que nunca está de más intentar contribuir a la mejora de los métodos aplicados en psicología, en el fondo la única manera de dar pasos firmes en cualquier disciplina es saber recoger y tratar los datos de los que uno dispone.

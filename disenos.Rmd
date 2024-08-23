@@ -1,5 +1,5 @@
 ---
-title: "Metodología y diseños"
+title: "Metodología y diseños de investigación"
 output:
   html_document:
     toc: true
